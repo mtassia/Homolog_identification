@@ -20,5 +20,5 @@ This code is not optimized to run on other platforms, but allows for an overal u
 
 For any questions, suggestions, or intention of use, please contact me at mgt0007@auburn.edu
 
-Michael Tassia
+Michael Tassia,
 Auburn University
