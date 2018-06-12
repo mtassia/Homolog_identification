@@ -1,4 +1,4 @@
-# Homolog_identification
+# EXTRACT_HOMOLOGS2
 Identify target homologs in amino acid datasets
 
 PREAMBLE ABOUT SCRIPT IN ITS ORIGINAL FORM:
