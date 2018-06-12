@@ -3,7 +3,7 @@ Identify target homologs in amino acid datasets
 
 PREAMBLE ABOUT SCRIPT IN ITS ORIGINAL FORM:
 The original function of this code was to identify TLR-pathway homologs across 40+ transcriptomic/genomic datasets.
-The original pipeline as used for Tassia et al. 2017 can be found as Extract_homologs.sh.
+The original pipeline as used for Tassia et al. 2017 can be found as Extract_homologues_with_interproscan.sh.
 
 Each protein dataset is blasted against the SwissProt database and sequences which best-hit to target proteins are pulled and labeled as a putative homolog (merely by primary sequence similarity). 
 To support homology given primary sequence similarity, the program annotates each sequence with SMART and Pfam domains to support homology and outputs the data in several formats (interproscan5's output formats). 
@@ -17,6 +17,7 @@ CD-HIT - Available at https://github.com/weizhongli/cdhit
 INTERPROSCAN - Available at https://www.ebi.ac.uk/interpro/download.html
 
 EXTRACT_HOMOLOGS2 is a reimplimentation of its predacessor which was use in Tassia et al. 2017. Unlike its predacessor, EXTRACT_HOMOLOGS2 has been written to be more user-friendly and (ideally) be more transportable between individual HPCs.
+EXTRACT_HOMOLOGS2 is a bash script that must be made executable in a unix environment using 'chmod +x'
 
 COMMAND LINE ARGUMENTS:
 
