@@ -35,7 +35,7 @@ while getopts ":d:kn:o:s:S:t:T:h" opt; do
 			printf "\t-h\tHelp information and USAGE\n\n"
 			printf "\t-k\tKeep temporary files !WARNING: Disk-space intensive! [OPTIONAL]\n\n"
 			printf "\t-n\tNaming template [MANDATORY]\n\n"
-			printf "\t-o\tOutput directory name [OPTIONAL]\n\n"
+			printf "\t-o\tOutput directory name [OPTIONAL, DEFAULT = ./Extract_homologs_output]\n\n"
 			printf "\t-s\tDirectory containing peptide sequence files [OPTIONAL, DEFAULT = pwd]\n\n"
 			printf "\t-S\tPath to select_contigs.pl [OPTIONAL, DEFAULT = pwd]\n\n"
 			printf "\t-t\tNumber of threads [DEFAULT = 1]\n\n"
