@@ -257,13 +257,6 @@ sort -k1,1 -k11,11g $DIRECTORY_PATH/Putative_homologs/Putative_homologs_from_all
 
 # ANNOTATED WITH INTERPROSCAN - PFAM AND SMART #
 
-######## ASC SPECIFIC #####################################################
-module purge						  ###################
-source /opt/asn/etc/asn-bash-profiles-special/modules.sh  #####################
-module load interproscan/5.26-65.0			  #######################
-INTERPROSCAN=`which interproscan.sh`			  #########################
-######## ASC SPECIFIC ###############################################################
-
 mkdir $DIRECTORY_PATH/tmp #TMP DIRECTORY FOR INTERPRO TMP FILES
 sed 's/*//g' $DIRECTORY_PATH/Putative_homologs/Putative_homologs_from_all_taxa.fasta > $DIRECTORY_PATH/Putative_homologs/Putative_homologs_from_all_taxa.interpro #INTERPRO REQUIRES NO "*", THIS STEP REMOVES THEM FROM THE FASTA FILE
 $INTERPROSCAN -appl SMART -appl PfamA -cpu ${THREADS} -T $DIRECTORY_PATH/tmp -d $DIRECTORY_PATH/Putative_homologs/ -i $DIRECTORY_PATH/Putative_homologs/Putative_homologs_from_all_taxa.interpro
