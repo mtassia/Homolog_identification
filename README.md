@@ -32,7 +32,7 @@ ________________________________________________________________________________
 ```
   -h Print help information
   -k Keep intermediate files (disk-space expensive)
-  -o Output directory name (creates the directory; default value is pwd)
+  -o Output directory name (creates the directory; default value is the new directory ./Extract_homologs_output)
   -s Directory containing peptide sequence files to be searched (default value is pwd)
   -S Path to select_contigs.pl
   -t Number of threads to be used with DIAMOND and InterproScan (default 1)
