@@ -1,4 +1,24 @@
-#!/bin/bash
+#!/bin/env bash
+
+### PROGRAM VARIABLES ###
+DIAMOND=`which diamond`
+CDHIT=`which cd-hit`
+SELECT_CONTIGS=`find ~ select_contigs.pl | egrep -m 1 "select_contigs.pl"`
+#INTERPROSCAN=`which interproscan.sh`
+#########################
+
+### MANDATORY INPUT FILES ###
+NAMING_TEMPLATE=`echo "NULL"`
+HOMOLOG_TARGETS=`echo "NULL"`
+DATABASE=`echo "NULL"`
+#############################
+
+### OPTIONAL ARGUMENTS ###
+SEQUENCES=`pwd | sed 's/$/\//'`
+THREADS=`echo "1"`
+KEEP_INTERMEDIATE=`echo "FALSE"`
+OUTPUT_DIRECTORY=`echo "Extract_homologs_output"`
+##########################
 
 ### FLAG ENTRY ###
 while getopts ":d:kn:o:s:S:t:T:h" opt; do
@@ -51,26 +71,6 @@ while getopts ":d:kn:o:s:S:t:T:h" opt; do
 	esac
 done
 ######################
-
-### PROGRAM VARIABLES ###
-DIAMOND=`which diamond`
-CDHIT=`which cd-hit`
-SELECT_CONTIGS=`find ~ select_contigs.pl | egrep -m 1 "select_contigs.pl"`
-#INTERPROSCAN=`which interproscan.sh`
-#########################
-
-### MANDATORY INPUT FILES ###
-NAMING_TEMPLATE=`echo "NULL"`
-HOMOLOG_TARGETS=`echo "NULL"`
-DATABASE=`echo "NULL"`
-#############################
-
-### OPTIONAL ARGUMENTS ###
-SEQUENCES=`pwd | sed 's/$/\//'`
-THREADS=`echo "1"`
-KEEP_INTERMEDIATE=`echo "FALSE"`
-OUTPUT_DIRECTORY=`echo "Extract_homologs_output"`
-##########################
 
 ### CHECKING FOR MANDATORY FLAGS ###
 if [[ $DATABASE == "NULL" ]]; then
