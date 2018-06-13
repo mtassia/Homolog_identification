@@ -14,7 +14,7 @@ DATABASE=`echo "NULL"`
 #############################
 
 ### OPTIONAL ARGUMENTS ###
-SEQUENCES=`pwd`
+SEQUENCES=`pwd | sed 's/$/\//'`
 THREADS=`echo "1"`
 KEEP_INTERMEDIATE=`echo "FALSE"`
 OUTPUT_DIRECTORY=`echo "Extract_homologs_output"`
