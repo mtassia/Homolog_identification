@@ -33,7 +33,21 @@ Optional:
   -S Path to select_contigs.pl
   -t Number of threads to be used with DIAMOND and InterproScan (default 1)
 
-For ease of use, all requisite programs should be installed into $PATH before using EXTRACT_HOMOLOGS2. 
+USAGE:
+NOTE: For ease of use, all requisite programs should be installed into $PATH before using EXTRACT_HOMOLOGS2. 
+REQUIRED: For the program to run properly, all searchable datasets should be translated prior to running the pipeline (commonly, we use TransDecoder - but program preference is up to the user). Additionally, a renaming template and list of target homologs must be provided (see examples in this distribution). 
+EXAMPLE COMMAND: Extract_homologs2.sh -d Blastdb/SwissProt.dmnd -n Naming_template.txt -T \ 
+Target_homologs.txt -s Datasets/ -o TEST_OUTPUT2 -t 8 -k
+
+OUTPUT:
+Every successful run of EXTRACT_HOMOLOGS2 will output the following files:
+
+--- Putative_homologs_from_all_taxa.fasta - Sequences of putative homologs consolidated from all searched datasets
+--- Putative_homologs_from_all_taxa.interpro.gff3 - InterproScan output of Putative_homologs_from_all_taxa.fasta annotation in gff3
+--- Putative_homologs_from_all_taxa.interpro.tsv - InterproScan output of Putative_homologs_from_all_taxa.fasta annotation in tsv
+--- Putative_homologs_from_all_taxa.interpro.xml - InterproScan output of Putative_homologs_from_all_taxa.fasta annotation in xml
+--- Putative_homologs_from_all_taxa.blastp_vs_swissprot.outfmt6 - Diamond blastp output of Putative_homologs_from_all_taxa.fasta against SwissProt
+--- Putative_homologs_from_all_taxa.besthit_vs_swissprot.outfmt6 - Diamond blastp output organized into best-hit only of Putative_homologs_from_all_taxa.fasta against SwissProt
 
 For any questions, suggestions, or intention of use, please contact me at mgt0007@auburn.edu
 
