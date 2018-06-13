@@ -43,7 +43,10 @@ ________________________________________________________________________________
 
 **REQUIRED:** For the program to run properly, all searchable datasets should be translated prior to running the pipeline (commonly, we use `TransDecoder` - but program preference is up to the user). Additionally, a renaming template (`-n`) and list of target homologs (`-T`) must be provided (see examples in this distribution). 
 
-**EXAMPLE COMMAND:** `Extract_homologs2.sh -d Blastdb/SwissProt.dmnd -n Naming_template.txt -T Target_homologs.txt -s Datasets/ -o TEST_OUTPUT2 -t 8 -k`
+**EXAMPLE COMMAND:** 
+```
+Extract_homologs2.sh -d Blastdb/SwissProt.dmnd -n Naming_template.txt -T Target_homologs.txt -s Datasets/ -o TEST_OUTPUT2 -t 8 -k`
+```
 
 ### OUTPUT:
 **Every successful run of EXTRACT_HOMOLOGS2 will output the following files:**
