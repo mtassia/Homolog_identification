@@ -30,8 +30,8 @@ ________________________________________________________________________________
 ```
 - **Optional:**
 ```
-  -h Print help information
-  -k Keep intermediate files (disk-space expensive)
+  -h       Print help information
+  -k       Keep intermediate files (disk-space expensive)
   -o <str> Output directory name (creates the directory; default value is the new directory ./Extract_homologs_output)
   -s <str> Directory containing peptide sequence files to be searched (default value is pwd)
   -S <str> Path to select_contigs.pl
