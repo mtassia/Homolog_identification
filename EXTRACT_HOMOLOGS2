@@ -31,15 +31,15 @@ while getopts ":d:kn:o:s:S:t:T:h" opt; do
 			;;
 		h)
 			printf "\n\tUSAGE\n\n"
-			printf "\t-d\tPath to diamond database file [MANDATORY]\n\n"
-			printf "\t-h\tHelp information and USAGE\n\n"
-			printf "\t-k\tKeep temporary files !WARNING: Disk-space intensive! [OPTIONAL]\n\n"
-			printf "\t-n\tNaming template [MANDATORY]\n\n"
-			printf "\t-o\tOutput directory name [OPTIONAL, DEFAULT = ./Extract_homologs_output]\n\n"
-			printf "\t-s\tDirectory containing peptide sequence files [OPTIONAL, DEFAULT = pwd]\n\n"
-			printf "\t-S\tPath to select_contigs.pl [OPTIONAL, DEFAULT = pwd]\n\n"
-			printf "\t-t\tNumber of threads [DEFAULT = 1]\n\n"
-			printf "\t-T\tList of target SwissProt protein homologs [MANDATORY]\n\n"
+			printf "\t-d <str> \tPath to diamond database file [MANDATORY]\n\n"
+                        printf "\t-h\t\tHelp information and USAGE\n\n"
+                        printf "\t-k\t\tKeep temporary files !WARNING: Disk-space intensive! [OPTIONAL]\n\n"
+                        printf "\t-n <str> \tNaming template [MANDATORY]\n\n"
+                        printf "\t-o <str> \tOutput directory name [OPTIONAL, DEFAULT = ./Extract_homologs_output]\n\n"
+                        printf "\t-s <str> \tDirectory containing peptide sequence files [OPTIONAL, DEFAULT = pwd]\n\n"
+                        printf "\t-S <str> \tPath to select_contigs.pl [OPTIONAL, DEFAULT = pwd]\n\n"
+                        printf "\t-t <int> \tNumber of threads [DEFAULT = 1]\n\n"
+                        printf "\t-T <str> \tList of target SwissProt protein homologs [MANDATORY]\n\n"
 			exit 1
 			;;
 		n)	
