@@ -24,18 +24,18 @@ ________________________________________________________________________________
 ### COMMAND LINE ARGUMENTS:
 - **Mandatory:**
 ```
-  -d Path to diamond database file
-  -n Naming template (example can be found in this distribution)
-  -T List of target SwissProt protein homologs (example can be found in this distribution)
+  -d <str> Path to diamond database file
+  -n <str> Naming template (example can be found in this distribution)
+  -T <str> List of target SwissProt protein homologs (example can be found in this distribution)
 ```
 - **Optional:**
 ```
   -h Print help information
   -k Keep intermediate files (disk-space expensive)
-  -o Output directory name (creates the directory; default value is the new directory ./Extract_homologs_output)
-  -s Directory containing peptide sequence files to be searched (default value is pwd)
-  -S Path to select_contigs.pl
-  -t Number of threads to be used with DIAMOND and InterproScan (default 1)
+  -o <str> Output directory name (creates the directory; default value is the new directory ./Extract_homologs_output)
+  -s <str> Directory containing peptide sequence files to be searched (default value is pwd)
+  -S <str> Path to select_contigs.pl
+  -t <int> Number of threads to be used with DIAMOND and InterproScan (default 1)
 ```
 
 ### USAGE:
