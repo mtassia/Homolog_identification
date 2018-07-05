@@ -41,7 +41,7 @@ ________________________________________________________________________________
 ### USAGE:
 **NOTE:** For ease of use, all requisite programs should be installed into `$PATH` before using EXTRACT_HOMOLOGS2. 
 
-**REQUIRED:** For the program to run properly, all searchable datasets should be translated prior to running the pipeline (commonly, we use `TransDecoder` - but program preference is up to the user). Additionally, a renaming template (`-n`) and list of target homologs (`-T`) must be provided (see examples in this distribution). Finally, protein datasets must have the `.fasta` extension.
+**REQUIRED:** For the program to run properly, all searchable datasets should be translated prior to running the pipeline (commonly, we use `TransDecoder` - but program preference is up to the user). Additionally, a renaming template (`-n`) and list of target homologs (`-T`) must be provided (see examples in this distribution). Finally, protein datasets must have the `.fasta` extension and `-s` argument must terminate with `/`.
 
 **EXAMPLE COMMAND:** 
 ```
