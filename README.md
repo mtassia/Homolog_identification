@@ -4,7 +4,7 @@ Identify target homologs in amino acid datasets
 ________________________________________________________________________________________________________________________________________
 ## PREAMBLE ABOUT SCRIPT IN ITS ORIGINAL FORM:
 The original function of this code was to identify TLR-pathway homologs across 40+ transcriptomic/genomic datasets.
-The original pipeline as used for *Tassia et al. 2017* can be found as `Extract_homologues_with_interproscan.sh.`
+The original pipeline as used for *Tassia et al. 2017* can be found as `Extract_homologues_LEGACY.sh`.
 
 Each protein dataset is blasted against the SwissProt database and sequences which best-hit to target proteins are pulled and labeled as a putative homolog (merely by primary sequence similarity). 
 To support homology given primary sequence similarity, the program annotates each sequence with SMART and Pfam domains to support homology and outputs the data in several formats (`InterProscan5`'s output formats). 
