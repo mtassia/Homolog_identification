@@ -54,7 +54,7 @@ Extract_homologs2.sh -d Blastdb/SwissProt.dmnd -n Naming_template.txt -T Target_
 ```
 
 ### OUTPUT:
-**Every successful run of EXTRACT_HOMOLOGS2 will output the following files:**
+**Every successful run of EXTRACT_HOMOLOGS2 (when `-k` flag isn't provided) will output the following files:**
 
 - `Putative_homologs_from_all_taxa.fasta` - Sequences of putative homologs consolidated from all searched datasets
 - `Putative_homologs_from_all_taxa.interpro.gff3` - InterproScan output of Putative_homologs_from_all_taxa.fasta annotation in gff3
