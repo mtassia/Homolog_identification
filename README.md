@@ -24,7 +24,7 @@ ________________________________________________________________________________
 ### COMMAND LINE ARGUMENTS:
 - **Mandatory:**
 ```
-  -d <str> Path to diamond database file
+  -d <str> Path to diamond database file (Use the diamond command: `diamond makedb --in uniprot.fasta --db uniprot`
   -n <str> Naming template (example can be found in this distribution)
   -T <str> List of target SwissProt protein homologs (example can be found in this distribution)
 ```
@@ -39,9 +39,14 @@ ________________________________________________________________________________
 ```
 
 ### USAGE:
+
 **NOTE:** For ease of use, all requisite programs should be installed into `$PATH` before using EXTRACT_HOMOLOGS2. 
 
-**REQUIRED:** For the program to run properly, all searchable datasets should be translated prior to running the pipeline (commonly, we use `TransDecoder` - but program preference is up to the user). Additionally, a renaming template (`-n`) and list of target homologs (`-T`) must be provided (see examples in this distribution). Finally, protein datasets must have the `.fasta` extension and `-s` argument must terminate with `/`.
+**REQUIRED:** For the program to run properly, the following must be considered:
+- All searchable datasets should be translated prior to running the pipeline (commonly, we use `TransDecoder` - but program preference is up to the user).
+- A renaming template (`-n`) and list of target homologs (`-T`) must be provided (see examples in this distribution).
+- The protein datasets must have the `.fasta` extension.
+- `-s` argument must terminate with `/`.
 
 **EXAMPLE COMMAND:** 
 ```
