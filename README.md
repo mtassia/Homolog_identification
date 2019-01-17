@@ -24,7 +24,7 @@ ________________________________________________________________________________
 ### COMMAND LINE ARGUMENTS:
 - **Mandatory:**
 ```
-  -d <str> Path to diamond database file (Use the diamond command: diamond makedb --in uniprot.fasta --db uniprot)
+  -d <str> Path to diamond database file. To make a diamond databse, use the following command: diamond makedb --in [fasta file] --db [name of databse being made]
   -n <str> Naming template (example can be found in this distribution)
   -T <str> List of target SwissProt protein homologs (example can be found in this distribution)
 ```
