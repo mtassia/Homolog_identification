@@ -21,6 +21,8 @@ ________________________________________________________________________________
 - `CD-HIT` - Available at https://github.com/weizhongli/cdhit
 - `INTERPROSCAN` - Available at https://www.ebi.ac.uk/interpro/download.html
 
+**Note:** If your HPC requires individual modules to be loaded into the environment, the four programs above will need to be loaded before running `EXTRACT_HOMOLOGS2`.
+
 ### COMMAND LINE ARGUMENTS:
 - **Mandatory:**
 ```
