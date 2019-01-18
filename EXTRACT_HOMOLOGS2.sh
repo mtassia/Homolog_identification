@@ -99,6 +99,11 @@ if [[ $FASTA_COUNT == "0" ]]; then
 	ERROR=`echo "TRUE"`
 fi
 
+if [[ -d "${OUTPUT_DIRECTORY}" ]]; then
+	printf "\n\tOutput directory exists. Please rename and try again.\n\t"
+	ERROR=`echo "TRUE"`
+fi
+
 if [[ $ERROR == "TRUE" ]]; then
 	printf "\n\tProvide [-h] flag for USAGE\n"
 	printf "\tExiting...\n\n"
