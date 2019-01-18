@@ -47,8 +47,8 @@ ________________________________________________________________________________
 **REQUIRED:** For the program to run properly, the following must be considered:
 - All searchable datasets should be translated prior to running the pipeline (commonly, we use `TransDecoder` - but program preference is up to the user).
 - A renaming template (`-n`) and list of target homologs (`-T`) must be provided (see examples in this distribution).
-- The protein datasets must have the `.fasta` extension.
-- `-s` argument must terminate with `/`.
+- The protein datasets must have the `.fasta` extension. **IMPORTANT:** All files in the working directory with the `.fasta` suffix will be processed by `EXTRACT_HOMOLOGS2`. Therefore, insure all `.fasta` files in the working directory are peptide files intended for processing.
+- If provided, `-s` argument must terminate with `/`.
 
 **EXAMPLE COMMAND:** 
 ```
