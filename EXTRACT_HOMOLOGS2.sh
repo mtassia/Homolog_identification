@@ -74,33 +74,48 @@ done
 
 ### CHECKING FOR MANDATORY FLAGS AND PROPER INPUT ###
 if [[ $DATABASE == "NULL" ]]; then
-	printf  "\n\tPath to diamond database [-d] not entered [MANDATORY].\n"
+	printf  "\n\tERROR: Path to diamond database [-d] not entered [MANDATORY].\n"
 	ERROR=`echo "TRUE"`
 fi 
+
+if ! [[ -s "${DATABASE}" ]]; then
+	printf  "\n\tERROR: Diamond database either does not exist or is empty.\n"
+        ERROR=`echo "TRUE"`
+fi
 
 if [[ $NAMING_TEMPLATE == "NULL" ]]; then
-	printf "\n\tNaming template [-n] not entered [MANDATORY].\n"
+	printf "\n\tERROR: Naming template [-n] not entered [MANDATORY].\n"
 	ERROR=`echo "TRUE"`
 fi 
 
+if ! [[ -s "${NAMING_TEMPLATE}" ]]; then
+        printf  "\n\tERROR: Naming template either does not exist or is empty.\n"
+        ERROR=`echo "TRUE"`
+fi
+
 if [[ $HOMOLOG_TARGETS == "NULL" ]]; then
-	printf "\n\tList of target SwissProt protein homologs [-T] not entered [MANDATORY].\n"
+	printf "\n\tERROR: List of target SwissProt protein homologs [-T] not entered [MANDATORY].\n"
 	ERROR=`echo "TRUE"`
 fi
 
+if ! [[ -s "${HOMOLOG_TARGETS}" ]]; then
+        printf  "\n\tERROR: List of target SwissProt accessions either does not exist or is empty.\n"
+        ERROR=`echo "TRUE"`
+fi
+
 if ! [[ -x "${SELECT_CONTIGS}" ]]; then
-        printf "\n\tselect_contigs.pl could not be found or is not executable.\n\t Add to path, specify location with [-S], or make executable with chmod.\n"
+        printf "\n\tERROR: select_contigs.pl could not be found or is not executable.\n\t Add to path, specify location with [-S], or make executable with chmod.\n"
         ERROR=`echo "TRUE"`
 fi
 
 FASTA_COUNT=`ls -l $SEQUENCES | egrep -c "*.fasta"`
 if [[ $FASTA_COUNT == "0" ]]; then
-	printf "\n\tNo .fasta files were found in working directory.\n\tUse [-s] to specify a directory containing .fasta files.\n\t"
+	printf "\n\tERROR: No .fasta files were found in working directory.\n\tUse [-s] to specify a directory containing .fasta files.\n\t"
 	ERROR=`echo "TRUE"`
 fi
 
 if [[ -d "${OUTPUT_DIRECTORY}" ]]; then
-	printf "\n\tOutput directory exists. Please rename and try again.\n\t"
+	printf "\n\tERROR: Output directory exists. Please rename and try again.\n\t"
 	ERROR=`echo "TRUE"`
 fi
 
