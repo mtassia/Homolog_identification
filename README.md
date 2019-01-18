@@ -52,7 +52,7 @@ ________________________________________________________________________________
 
 **EXAMPLE COMMAND:** 
 ```
-Extract_homologs2.sh -d Blastdb/SwissProt.dmnd -n Naming_template.txt -T Target_homologs.txt -s Datasets/ -o TEST_OUTPUT2 -t 8 -k`
+EXTRACT_HOMOLOGS2.sh -d Blastdb/SwissProt.dmnd -n Naming_template.txt -T Target_homologs.txt -s Datasets/ -o TEST_OUTPUT2 -t 8 -k`
 ```
 
 ### OUTPUT:
