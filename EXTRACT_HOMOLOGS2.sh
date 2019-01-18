@@ -4,7 +4,7 @@
 DIAMOND=`which diamond`
 CDHIT=`which cd-hit`
 SELECT_CONTIGS=`find ~ select_contigs.pl | egrep -m 1 "select_contigs.pl"`
-#INTERPROSCAN=`which interproscan.sh`
+INTERPROSCAN=`which interproscan.sh`
 #########################
 
 ### MANDATORY INPUT FILES ###
@@ -72,7 +72,7 @@ while getopts ":d:kn:o:s:S:t:T:h" opt; do
 done
 ######################
 
-### CHECKING FOR MANDATORY FLAGS ###
+### CHECKING FOR MANDATORY FLAGS AND PROPER INPUT ###
 if [[ $DATABASE == "NULL" ]]; then
 	printf  "\n\tPath to diamond database [-d] not entered [MANDATORY].\n"
 	ERROR=`echo "TRUE"`
@@ -85,6 +85,17 @@ fi
 
 if [[ $HOMOLOG_TARGETS == "NULL" ]]; then
 	printf "\n\tList of target SwissProt protein homologs [-T] not entered [MANDATORY].\n"
+	ERROR=`echo "TRUE"`
+fi
+
+if ! [[ -x "${SELECT_CONTIGS}" ]]; then
+        printf "\n\tselect_contigs.pl could not be found or is not executable.\n\t Add to path, specify location with [-S], or make executable with chmod.\n"
+        ERROR=`echo "TRUE"`
+fi
+
+FASTA_COUNT=`ls -l $SEQUENCES | egrep -c "*.fasta"`
+if [[ $FASTA_COUNT == "0" ]]; then
+	printf "\n\tNo .fasta files were found in working directory.\n\tUse [-s] to specify a directory containing .fasta files.\n\t"
 	ERROR=`echo "TRUE"`
 fi
 
