@@ -290,7 +290,7 @@ sort -k1,1 -k11,11g $DIRECTORY_PATH/Putative_homologs/Putative_homologs_from_all
 
 mkdir $DIRECTORY_PATH/tmp #TMP DIRECTORY FOR INTERPRO TMP FILES
 sed 's/*//g' $DIRECTORY_PATH/Putative_homologs/Putative_homologs_from_all_taxa.fasta > $DIRECTORY_PATH/Putative_homologs/Putative_homologs_from_all_taxa.interpro #INTERPRO REQUIRES NO "*", THIS STEP REMOVES THEM FROM THE FASTA FILE
-$INTERPROSCAN -appl SMART -appl PfamA -cpu ${THREADS} -T $DIRECTORY_PATH/tmp -d $DIRECTORY_PATH/Putative_homologs/ -i $DIRECTORY_PATH/Putative_homologs/Putative_homologs_from_all_taxa.interpro
+$INTERPROSCAN -appl SMART -appl Pfam -cpu ${THREADS} -T $DIRECTORY_PATH/tmp -d $DIRECTORY_PATH/Putative_homologs/ -i $DIRECTORY_PATH/Putative_homologs/Putative_homologs_from_all_taxa.interpro
 rmdir $DIRECTORY_PATH/tmp
 
 # FINAL CLEANUP #
