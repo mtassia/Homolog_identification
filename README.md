@@ -1,5 +1,7 @@
 # EXTRACT_HOMOLOGS2
-Identify target homologs in amino acid datasets
+*Identify target homologs in amino acid datasets* 
+
+**Disclaimer**: This repository is maintained for the express purpose of retaining bioinformatic transparency with the code used for Tassia et al. 2017.
 
 ________________________________________________________________________________________________________________________________________
 ## PREAMBLE ABOUT SCRIPT IN ITS ORIGINAL FORM:
